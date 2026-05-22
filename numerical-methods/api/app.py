@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import math
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 
 def bisection_method(func_str, a, b, tol=1e-6, max_iter=100):
